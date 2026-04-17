@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Accessible Profile Card - HNG Frontend Task">
+    <title>Profile Card | HNG Task</title>
+    
+    <!-- Font Awesome 6 for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <!-- Profile Card Root - Using semantic <article> -->
+        <article class="profile-card" data-testid="test-profile-card" role="region" aria-label="User profile card">
+            
+            <!-- Avatar Section with <figure> -->
+            <figure class="avatar-section" data-testid="test-user-avatar">
+                <img src="assets/avatar.jpg" 
+                     alt="Grace Olumuyiwa - Software Developer and Technology Professional" 
+                     class="avatar-image">
+                <figcaption class="sr-only">Profile picture of Grace Olumuyiwa</figcaption>
+            </figure>
+            
+            <!-- Profile Info Section -->
+            <div class="profile-info">
+                
+                <!-- Header with Name -->
+                <header class="profile-header">
+                    <h2 class="user-name" data-testid="test-user-name">
+                        Grace Olumuyiwa
+                    </h2>
+                    <p class="user-title">Software Developer | Cybersecurity Analyst | Data Analyst</p>
+                </header>
+                
+                <!-- Short Biography -->
+                <div class="bio-section">
+                    <p class="user-bio" data-testid="test-user-bio">
+                        Started my tech journey in 2022, mastering WordPress before transitioning to full-stack development. 
+                        Currently pursuing a Master's in Business Computing at the University of Ibadan, Nigeria. 
+                        My philosophy: <em>"I don't know it because I never learnt it."</em>
+                    </p>
+                </div>
+                
+                <!-- Current Time in Milliseconds -->
+                <div class="time-section" aria-live="polite">
+                    <span class="time-label">Current Epoch Time:</span>
+                    <span class="time-value" id="current-time" data-testid="test-user-time">
+                        -- loading --
+                    </span>
+                </div>
+                
+                <!-- Hobbies Section -->
+                <section class="interests-section" aria-labelledby="hobbies-heading">
+                    <h3 id="hobbies-heading" class="section-heading">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        Hobbies & Interests
+                    </h3>
+                    <ul class="interests-list" data-testid="test-user-hobbies">
+                        <li>📚 Reading Technical Books</li>
+                        <li>💻 Open Source Contribution</li>
+                        <li>🎧 Podcast Listening (Tech & Security)</li>
+                        <li>✍️ Technical Writing</li>
+                        <li>🌍 Volunteering for Tech Communities</li>
+                    </ul>
+                </section>
+                
+                <!-- Dislikes Section -->
+                <section class="dislikes-section" aria-labelledby="dislikes-heading">
+                    <h3 id="dislikes-heading" class="section-heading">
+                        <i class="fas fa-thumbs-down" aria-hidden="true"></i>
+                        Dislikes
+                    </h3>
+                    <ul class="dislikes-list" data-testid="test-user-dislikes">
+                        <li>🐌 Slow Internet Connections</li>
+                        <li>📱 Poorly Optimized Mobile Apps</li>
+                        <li>🔒 Security Breaches & Data Leaks</li>
+                        <li>⏰ Missed Deadlines</li>
+                        <li>🧩 Unclear Project Requirements</li>
+                    </ul>
+                </section>
+                
+                <!-- Social Links Navigation -->
+                <nav class="social-links-section" aria-label="Social media links">
+                    <h3 class="section-heading">
+                        <i class="fas fa-share-alt" aria-hidden="true"></i>
+                        Connect With Me
+                    </h3>
+                    <ul class="social-links-list" data-testid="test-user-social-links">
+                        <li>
+                            <a href="https://linkedin.com/in/grace-muyiwa1988" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               data-testid="test-user-social-linkedin"
+                               class="social-link linkedin">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Gracogen" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               data-testid="test-user-social-github"
+                               class="social-link github">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                                GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/Code_With_Grace" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               data-testid="test-user-social-twitter"
+                               class="social-link twitter">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                                Twitter (X)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:gracogenolu06@gmail.com"
+                               data-testid="test-user-social-email"
+                               class="social-link email">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                Email
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </article>
+    </main>
+    
+    <!-- Hidden live region for screen reader announcements -->
+    <div class="sr-only" aria-live="polite" aria-atomic="true" id="live-region"></div>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
